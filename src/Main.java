@@ -29,15 +29,12 @@ public class Main {
         System.out.println("Задание номер 2");
         int[] arr = generateRandomArray();
         int maxSum = -1;
+        int minSum=arr[arr.length-1];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > maxSum) {
                 maxSum = arr[i];
-            }
-        }
-        int minSum = arr[arr.length - 1];
-        for (int i = arr.length - 1; i >= arr.length; i--) {
-            if (arr[i] < minSum) {
-                minSum = arr[i];
+           }
+            if (arr[i]<minSum){
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minSum + " рублей. Максимальная сумма трат за день составила " + maxSum + " рублей");
@@ -50,7 +47,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             sum = sum + arr[i];
         }
-        float mediumOfExpensive = sum / arr.length;
+        float mediumOfExpensive = (float)sum / arr.length;
         System.out.println("Средняя сумма трат за месяц составила" + mediumOfExpensive);
     }
 
